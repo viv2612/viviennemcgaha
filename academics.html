@@ -39,8 +39,8 @@
 
     <div class="academics-layout">
 
-      <!-- Top row: High School card + photos -->
-      <div class="academics-top-section">
+      <!-- Left: note cards -->
+      <div class="academics-grid">
 
         <div class="academics-card card rotate-left">
           <div class="washi-tape washi-coffee"></div>
@@ -68,72 +68,78 @@
           </ul>
         </div>
 
-        <!-- Photos column: polaroids + postcard stacked -->
-        <div class="academics-photos-col">
-          <div class="polaroid-cluster">
-            <div class="polaroid">
-              <img src="images/valedictorian.jpg" alt="Valedictorian" onclick="openLightbox(this)">
-              <p class="polaroid-caption">Graduation Regalia</p>
-            </div>
-            <div class="polaroid">
-              <img src="images/val speech.png" alt="Valedictorian Speech" onclick="openLightbox(this)">
-              <p class="polaroid-caption">Valedictorian speech to over 5000+ attendees</p>
-            </div>
-          </div>
-          <div class="postcard card">
-            <div class="washi-tape washi-caput"></div>
-            <p class="card-text">Valedictorian, Sickles High School Class of 2025 | 7.68 Weighted GPA | 4.0 Unweighted GPA</p>
-          </div>
-        </div>
-
       </div>
 
-      <!-- Bottom row: Freshman Year + GPA & Honors (scrollable) -->
-      <div class="academics-bottom-section">
+      <!-- Right: polaroids + freshman year side by side -->
+      <div class="academics-right">
 
-        <div class="academics-card card rotate-right">
-          <div class="washi-tape washi-tan"></div>
-          <div class="push-pin pin-small pin-caput"></div>
-          <h3 class="card-label">Freshman Year</h3>
-          <p class="academics-semester">Fall 2025:</p>
-          <ul class="academics-list">
-            <li>Foundations of Business Analytics and AI — QMB3302</li>
-            <li>Business and You: Warrington Welcome — GEB2015</li>
-            <li>Introduction to Information Systems — ISM3013</li>
-            <li>Research and Creativity — HUM2930</li>
-            <li>Secrets of Alchemy — ISC1010C</li>
-            <li>Marching Band — MUN1110</li>
-          </ul>
-          <p class="academics-semester">Spring 2026:</p>
-          <ul class="academics-list">
-            <li>Intro to Financial Accounting — ACG2021</li>
-            <li>Statistics for Business Decisions — QMB3250</li>
-            <li>Global Ethics in Business — BUL4443</li>
-            <li>Siri is My Superpower: Communicating with AI — COM2382</li>
-            <li>Sales Seminar — MAR2401</li>
-            <li>Wind Symphony — MUN1140</li>
-          </ul>
-        </div>
+        <div class="academics-top-row">
 
-        <div class="academics-card card rotate-left">
-          <div class="washi-tape washi-slate"></div>
-          <div class="push-pin pin-small pin-slate"></div>
-          <h3 class="card-label">GPA &amp; Honors</h3>
-          <ul class="academics-list">
-            <li>University Research Scholars Program (URSP) — Fall 2025</li>
-            <li>Honors College — Fall 2025</li>
-            <li>Dean's List — Fall 2025</li>
-            <li>Valedictorian — May 2025</li>
-            <li>President's Cup — April 2025</li>
-            <li>Hillsborough All County Honor Band / Orchestra — 2020–2025</li>
-            <li>Florida All State Symphonic Band — January 2025</li>
-            <li>USF Festival of Winds Honor Band — December 2024</li>
-            <li>National Band and Orchestra Festival — March 2024</li>
-            <li>Florida Flute Association (FFA) Honors Choir — January 2024</li>
-            <li>AP Scholar with Distinction — July 2023</li>
-            <li>Master Musician — May 2023</li>
-            <li>Nine Star Honor Band — May 2022</li>
-          </ul>
+          <!-- Photos column: polaroids + postcard stacked -->
+          <div class="academics-photos-col">
+            <div class="polaroid-cluster">
+              <div class="polaroid">
+                <img src="images/valedictorian.jpg" alt="Valedictorian" onclick="openLightbox(this)">
+                <p class="polaroid-caption">Graduation Regalia</p>
+              </div>
+              <div class="polaroid">
+                <img src="images/val speech.png" alt="Valedictorian Speech" onclick="openLightbox(this)">
+                <p class="polaroid-caption">Valedictorian speech to over 5000+ attendees</p>
+              </div>
+            </div>
+            <div class="postcard card">
+              <div class="washi-tape washi-caput"></div>
+              <p class="card-text">Valedictorian, Sickles High School Class of 2025 | 7.68 Weighted GPA | 4.0 Unweighted GPA</p>
+            </div>
+          </div>
+
+          <!-- Freshman Year card to the right -->
+          <div class="academics-card card rotate-right">
+            <div class="washi-tape washi-tan"></div>
+            <div class="push-pin pin-small pin-caput"></div>
+            <h3 class="card-label">Freshman Year</h3>
+            <p class="academics-semester">Fall 2025:</p>
+            <ul class="academics-list">
+              <li>Foundations of Business Analytics and AI — QMB3302</li>
+              <li>Business and You: Warrington Welcome — GEB2015</li>
+              <li>Introduction to Information Systems — ISM3013</li>
+              <li>Research and Creativity — HUM2930</li>
+              <li>Secrets of Alchemy — ISC1010C</li>
+              <li>Marching Band — MUN1110</li>
+            </ul>
+            <p class="academics-semester">Spring 2026:</p>
+            <ul class="academics-list">
+              <li>Intro to Financial Accounting — ACG2021</li>
+              <li>Statistics for Business Decisions — QMB3250</li>
+              <li>Global Ethics in Business — BUL4443</li>
+              <li>Siri is My Superpower: Communicating with AI — COM2382</li>
+              <li>Sales Seminar — MAR2401</li>
+              <li>Wind Symphony — MUN1140</li>
+            </ul>
+          </div>
+
+          <!-- GPA & Honors card -->
+          <div class="academics-card card rotate-left">
+            <div class="washi-tape washi-slate"></div>
+            <div class="push-pin pin-small pin-slate"></div>
+            <h3 class="card-label">GPA &amp; Honors</h3>
+            <ul class="academics-list">
+              <li>University Research Scholars Program (URSP) — Fall 2025</li>
+              <li>Honors College — Fall 2025</li>
+              <li>Dean's List — Fall 2025</li>
+              <li>Valedictorian — May 2025</li>
+              <li>President's Cup — April 2025</li>
+              <li>Hillsborough All County Honor Band / Orchestra — 2020–2025</li>
+              <li>Florida All State Symphonic Band — January 2025</li>
+              <li>USF Festival of Winds Honor Band — December 2024</li>
+              <li>National Band and Orchestra Festival — March 2024</li>
+              <li>Florida Flute Association (FFA) Honors Choir — January 2024</li>
+              <li>AP Scholar with Distinction — July 2023</li>
+              <li>Master Musician — May 2023</li>
+              <li>Nine Star Honor Band — May 2022</li>
+            </ul>
+          </div>
+
         </div>
 
       </div>
