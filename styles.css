@@ -83,6 +83,27 @@ a {
   color: var(--tan);
 }
 
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--cream);
+  border-radius: 2px;
+  transition: transform 0.25s, opacity 0.25s;
+}
+.nav-toggle--open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle--open span:nth-child(2) { opacity: 0; }
+.nav-toggle--open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
 /* ============================================================
    HERO SECTION
    ============================================================ */
@@ -1168,29 +1189,33 @@ a {
 
 .academics-layout {
   display: flex;
-  gap: 5rem;
-  align-items: flex-start;
+  flex-direction: column;
+  gap: 3rem;
   margin-top: 1rem;
 }
 
-.academics-grid {
+.academics-top-section {
   display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-  flex-shrink: 0;
+  gap: 3rem;
+  align-items: flex-start;
 }
 
-.academics-right {
+.academics-bottom-section {
   display: flex;
-  flex-direction: column;
+  gap: 3rem;
   align-items: flex-start;
-  gap: 2.5rem;
 }
 
 .academics-card {
-  width: 340px;
+  flex: 1;
+  width: auto;
   transform: rotate(-1deg);
   box-shadow: 4px 6px 20px rgba(37, 52, 79, 0.22);
+}
+
+.academics-bottom-section .academics-card {
+  max-height: 380px;
+  overflow-y: auto;
 }
 
 .academics-card:nth-child(even) {
@@ -1243,32 +1268,28 @@ a {
 
 /* --- Polaroids -------------------------------------------- */
 .polaroid-cluster {
-  position: relative;
-  width: 460px;
-  height: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
 }
 
 .polaroid-cluster .polaroid:first-child {
-  position: absolute;
-  top: 8px;
-  left: 0;
-  transform: rotate(-4deg);
-  z-index: 1;
+  transform: rotate(-2deg);
+  align-self: flex-start;
 }
 
 .polaroid-cluster .polaroid:last-child {
-  position: absolute;
-  top: 0;
-  left: 215px;
-  transform: rotate(3.5deg);
-  z-index: 2;
+  transform: rotate(2deg);
+  align-self: flex-end;
 }
 
 .polaroid {
   background: var(--white);
   padding: 10px 10px 44px;
   box-shadow: 5px 8px 22px rgba(37, 52, 79, 0.22);
-  width: 240px;
+  width: 100%;
+  max-width: 260px;
   flex-shrink: 0;
 }
 
@@ -1375,22 +1396,18 @@ a {
 
 /* --- Postcard --------------------------------------------- */
 .postcard {
-  width: 460px;
+  width: 100%;
+  max-width: 460px;
   transform: rotate(-0.8deg);
   box-shadow: 4px 6px 20px rgba(37, 52, 79, 0.22);
 }
 
-.academics-top-row {
-  display: flex;
-  gap: 3rem;
-  align-items: flex-start;
-}
-
 .academics-photos-col {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
-  flex-shrink: 0;
+  gap: 2rem;
+  min-width: 0;
 }
 
 /* ============================================================
@@ -1451,9 +1468,9 @@ a {
 }
 
 .cv-entry-row {
-  display: grid;
-  grid-template-columns: 165px 1fr;
-  gap: 0.5rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
   margin-bottom: 1.5rem;
 }
 
@@ -1535,13 +1552,69 @@ a {
 }
 
 @media (max-width: 600px) {
-  .nav-links { display: none; }
+  /* Nav */
+  .navbar { padding: 1rem 1.25rem; position: relative; }
+  .nav-toggle { display: flex; }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: var(--space-cadet);
+    border-bottom: 2px solid var(--tan);
+    padding: 0.5rem 0;
+    z-index: 999;
+  }
+  .nav-links.nav-open { display: flex; }
+  .nav-links li { padding: 0; }
+  .nav-links li a { display: block; padding: 0.7rem 1.5rem; font-size: 0.9rem; }
+
+  /* Hero */
   .profile-photo-wrapper { width: 180px; height: 180px; }
+  .profile-outline { width: 200px; }
+  .hero-left { padding: 2rem 1.25rem 1rem; }
+  .hero-right { padding: 1rem 1.25rem 2rem; }
+  .about-card, .events-card, .strengths-card, .obsessions-card { width: 100% !important; }
 
-  .projects-grid { gap: 2rem; }
-  .project-card  { width: calc(50% - 1rem); }
-}
-
-@media (max-width: 420px) {
+  /* Project cards */
+  .projects-grid { gap: 1.25rem; }
   .project-card { width: 100%; }
+
+  /* Wisdom cards */
+  .wisdom-grid { gap: 1rem; }
+  .wisdom-card { width: 100%; }
+
+  /* Gallery */
+  .gallery-item { width: 100%; }
+  .gallery-img { height: 240px; }
+
+  /* Research */
+  .research-layout { flex-direction: column; gap: 2rem; }
+  .research-card { width: 100%; max-width: 100%; }
+  .research-postcard { width: 100%; max-width: 100%; }
+  .research-photo { width: 100%; max-width: 100%; height: auto; }
+
+  /* Academics */
+  .academics-top-section, .academics-bottom-section { flex-direction: column; gap: 2rem; }
+  .academics-card { width: 100%; flex: none; }
+  .academics-bottom-section .academics-card { max-height: none; overflow-y: visible; }
+  .academics-photos-col { width: 100%; }
+
+  /* CV */
+  .cv-entry-date { width: auto; min-width: unset; }
+
+  /* General */
+  .page-main { padding: 2rem 1.25rem; }
+  .section-title { font-size: 1.5rem; }
+
+  /* Scale down hero stickers so they don't crowd the profile/name */
+  .sticker-tl { width: 90px; }
+  .sticker-tr { width: 130px; top: -8px; right: -8px; }
+  .sticker-gw { width: 95px; }
+  .sticker-tc { width: 100px; }
+  .sticker-ml { width: 90px; }
+  .sticker-mr { width: 105px; right: -8px; }
+  .sticker-bl { width: 130px; bottom: -8px; left: -8px; }
+  .sticker-sn { width: 95px; }
 }
