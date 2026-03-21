@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <!-- Background -->
+  <rect width="80" height="80" rx="16" fill="#25344F"/>
+  <!-- 5-point star -->
+  <path d="M40,6 L48,29 L72,29 L52,44 L60,68 L40,53 L20,68 L28,44 L8,29 L32,29 Z"
+        fill="#D5B893"/>
+</svg>

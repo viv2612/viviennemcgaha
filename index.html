@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vivienne McGaha</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+
+  <!-- ======= LOADER =======
+       OPTION 1 (dark/navy): background #25344F, star stroke #D5B893, stars use gold/cream/slate/caput/coffee
+       OPTION 2 (light/cream): background #FAF6EE, star stroke #25344F, stars use navy/slate/caput/coffee (no gold/cream)
+       To switch: toggle the CSS #loader background + .ldr-star stroke + fill colors below
+  -->
+  <!-- ACTIVE: Option 1 (dark) -->
+  <div id="loader">
+    <svg class="ldr-svg" viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg">
+      <!-- Background scattered ✦ stars — varied sizes & colors, outside the central star region -->
+      <!-- Small ✦ -->
+      <text class="ldr-bg ldr-b1"  x="18"  y="22"  font-size="4"  text-anchor="middle" dominant-baseline="central" fill="#D5B893">✦</text>
+      <text class="ldr-bg ldr-b2"  x="72"  y="48"  font-size="4"  text-anchor="middle" dominant-baseline="central" fill="#617891">✦</text>
+      <text class="ldr-bg ldr-b3"  x="340" y="32"  font-size="4"  text-anchor="middle" dominant-baseline="central" fill="#F5EFE0">✦</text>
+      <text class="ldr-bg ldr-b4"  x="385" y="95"  font-size="4"  text-anchor="middle" dominant-baseline="central" fill="#632024">✦</text>
+      <text class="ldr-bg ldr-b5"  x="15"  y="185" font-size="4"  text-anchor="middle" dominant-baseline="central" fill="#6F4D38">✦</text>
+      <text class="ldr-bg ldr-b6"  x="55"  y="250" font-size="4"  text-anchor="middle" dominant-baseline="central" fill="#D5B893">✦</text>
+      <text class="ldr-bg ldr-b7"  x="375" y="210" font-size="4"  text-anchor="middle" dominant-baseline="central" fill="#617891">✦</text>
+      <text class="ldr-bg ldr-b8"  x="355" y="262" font-size="4"  text-anchor="middle" dominant-baseline="central" fill="#F5EFE0">✦</text>
+      <!-- Medium ✦ -->
+      <text class="ldr-bg ldr-b9"  x="88"  y="18"  font-size="8"  text-anchor="middle" dominant-baseline="central" fill="#617891">✦</text>
+      <text class="ldr-bg ldr-b10" x="305" y="22"  font-size="8"  text-anchor="middle" dominant-baseline="central" fill="#D5B893">✦</text>
+      <text class="ldr-bg ldr-b11" x="25"  y="130" font-size="8"  text-anchor="middle" dominant-baseline="central" fill="#F5EFE0">✦</text>
+      <text class="ldr-bg ldr-b12" x="382" y="148" font-size="8"  text-anchor="middle" dominant-baseline="central" fill="#632024">✦</text>
+      <text class="ldr-bg ldr-b13" x="130" y="268" font-size="8"  text-anchor="middle" dominant-baseline="central" fill="#6F4D38">✦</text>
+      <text class="ldr-bg ldr-b14" x="270" y="265" font-size="8"  text-anchor="middle" dominant-baseline="central" fill="#617891">✦</text>
+      <!-- Big ✦ -->
+      <text class="ldr-bg ldr-b15" x="50"  y="78"  font-size="14" text-anchor="middle" dominant-baseline="central" fill="#D5B893">✦</text>
+      <text class="ldr-bg ldr-b16" x="360" y="65"  font-size="14" text-anchor="middle" dominant-baseline="central" fill="#632024">✦</text>
+      <text class="ldr-bg ldr-b17" x="40"  y="230" font-size="14" text-anchor="middle" dominant-baseline="central" fill="#617891">✦</text>
+      <text class="ldr-bg ldr-b18" x="368" y="235" font-size="14" text-anchor="middle" dominant-baseline="central" fill="#F5EFE0">✦</text>
+      <!-- Star perimeter path — same shape as the favicon, drawn as a continuous stroke -->
+      <path class="ldr-star"
+        d="M200,60 L218,115 L276,115 L230,150 L247,205 L200,171 L153,205 L171,150 L124,115 L182,115 Z"
+        fill="none" stroke="#D5B893"/>
+    </svg>
+  </div>
+  <script>
+    (function() {
+      var loader = document.getElementById('loader');
+      var navType = (performance.getEntriesByType('navigation')[0] || {}).type;
+      var isReload = navType === 'reload';
+      var isFirstVisit = !sessionStorage.getItem('loaderShown');
+      if (isReload || isFirstVisit) {
+        sessionStorage.setItem('loaderShown', '1');
+        setTimeout(function() {
+          loader.style.animation = 'ldr-fade-out 0.5s ease forwards';
+          loader.addEventListener('animationend', function() { loader.style.display = 'none'; }, { once: true });
+        }, 2500);
+      } else {
+        loader.style.display = 'none';
+      }
+    })();
+  </script>
+
+  <!-- ======= NAVIGATION ======= -->
+  <nav class="navbar">
+    <a href="#" class="nav-brand">Vivienne McGaha</a>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="academics.html">Academics</a></li>
+      <li><a href="journal.html">Journal</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="cv.html">CV</a></li>
+    </ul>
+  </nav>
+
+  <!-- ======= HERO ======= -->
+  <section class="hero" id="about">
+
+    <!-- Left panel: photo + name -->
+    <div class="hero-left">
+
+      <!-- Sticker decorations — all 8 images, no overlaps -->
+      <img src="potential stickers/ace of hearts.png"            class="sticker-deco sticker-tl" alt="">
+      <img src="potential stickers/star chart.png"               class="sticker-deco sticker-tr" alt="">
+      <img src="potential stickers/great wave.png"               class="sticker-solo sticker-gw" alt="">
+      <img src="potential stickers/quirky star.png"              class="sticker-deco sticker-tc" alt="">
+      <img src="potential stickers/gold & blue flower stamp.png" class="sticker-deco sticker-ml" alt="">
+      <img src="potential stickers/vinyl.png"                    class="sticker-deco sticker-mr" alt="">
+      <img src="potential stickers/constellations.png"           class="sticker-deco sticker-bl" alt="">
+      <img src="potential stickers/snoopy converse all star.png" class="sticker-solo sticker-sn" alt="">
+
+      <h1 class="hero-name">Vivienne<br>McGaha</h1>
+
+      <img src="images/self outline.png" alt="Vivienne McGaha" class="profile-outline">
+
+      <!-- Zodiac + MBTI -->
+      <div class="personal-tags">
+        <div class="tag-row"><span class="tag-symbol">☀️</span><span>Leo Sun</span></div>
+        <div class="tag-row"><span class="tag-symbol">🌙</span><span>Libra Moon</span></div>
+        <div class="tag-row"><span class="tag-symbol">⬆</span><span>Cancer Rising</span></div>
+        <div class="tag-divider"></div>
+        <div class="tag-row tag-mbti"><span class="tag-symbol">✦</span><span>ESTJ · The Executive</span></div>
+      </div>
+
+      <!-- Decorative stars -->
+      <span class="star star-1">✦</span>
+      <span class="star star-2">✧</span>
+      <span class="star star-3">★</span>
+      <span class="star star-4">✦</span>
+      <span class="star star-5">✧</span>
+      <span class="star star-6">·</span>
+      <span class="star star-7">✦</span>
+    </div>
+
+    <!-- Right panel: about card + obsessions card -->
+    <div class="hero-right">
+      <div class="about-card card" id="about-card">
+        <div class="washi-tape washi-navy"></div>
+        <h3 class="card-label">About Me</h3>
+        <p class="card-text">Hii! My name is Vivienne, and I am a first-year student at the University of Florida studying Finance with minors in Economics and Professional Sales! I am currently interested in pursuing management roles or attending graduate school after graduation, in hopes of becoming a professor. Being able to contribute back to society and feel that impact is super important to me. I am always happy to meet new people, so don't be afraid to reach out! #GoGators🐊♡</p>
+      </div>
+
+      <div class="obsessions-card card dark-card" id="obsessions">
+        <div class="washi-tape washi-coffee"></div>
+        <div class="push-pin"></div>
+        <h3 class="card-label">Current<br>Obsessions</h3>
+        <ul class="obsessions-list">
+          <li><span class="obs-label">Listening:</span> Ctrl by SZA</li>
+          <li><span class="obs-label">Reading:</span> Stand Your Ground by Offstein</li>
+          <li><span class="obs-label">Learning:</span> Claude</li>
+        </ul>
+      </div>
+      <div class="strengths-card card caput-card">
+        <div class="washi-tape washi-slate"></div>
+        <div class="push-pin pin-small pin-caput"></div>
+        <h3 class="card-label">Clifton Strengths</h3>
+        <ol class="strengths-list">
+          <li>Significance</li>
+          <li>Competition</li>
+          <li>Achiever</li>
+          <li>Activator</li>
+          <li>Focus</li>
+        </ol>
+      </div>
+      <div class="events-card card slate-card">
+        <div class="washi-tape washi-caput"></div>
+        <div class="push-pin pin-small pin-slate"></div>
+        <h3 class="card-label">Current News</h3>
+        <ul class="events-list">
+          <li>Incoming Program Manager, L3Harris – Summer 2026</li>
+          <li>Research Assistant, Warrington College of Business</li>
+          <li>Preparing DSI Symposium – March 28th</li>
+        </ul>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ======= PROJECTS ======= -->
+  <section class="projects-section" id="projects">
+    <div class="section-header">
+      <div class="section-tape"></div>
+      <h2 class="section-title">Projects</h2>
+    </div>
+
+    <div class="projects-grid">
+
+      <div class="project-card card rotate-left"
+           onclick="openProjectModal(this)"
+           data-title="DataFables"
+           data-desc="An award-winning interactive storytelling game for kids, built at Hacklytics Golden Byte 2026. DataFables ranked 3rd out of 1200+ participants."
+           data-detail="DataFables is an interactive storytelling platform that turns reading into a game: kids can pick from 6 genres, customize a protagonist, and make choices that change the story, while the reading experience adapts to their age range and typical Lexile level, includes pronunciation practice with instant feedback, rewards progress with XP and coins they can spend on character accessories, and supports 10 languages to make it accessible for more kids worldwide."
+           data-link-line="Link to our Devpost ➤"
+           data-link-url="https://devpost.com/software/hacklytics-2026"
+           data-img="images/datafables.png">
+        <div class="push-pin pin-small"></div>
+        <div class="project-img" style="background-image: url('images/datafables.png'); background-size: cover; background-position: center;">
+          <div class="winner-badge">3rd Place · Entertainment Track</div>
+        </div>
+        <div class="project-info">
+          <h4>DataFables</h4>
+          <p>An award-winning interactive storytelling game for kids, ranked 3rd out of 1200+ participants at Hacklytics Golden Byte 2026.</p>
+          <span class="project-link">View →</span>
+        </div>
+      </div>
+
+      <div class="project-card card rotate-right"
+           onclick="openProjectModal(this)"
+           data-title="Project Two"
+           data-desc="In the works."
+           data-img=""
+           data-color="#617891">
+        <div class="push-pin pin-small pin-slate"></div>
+        <div class="project-img" style="background: #617891;"></div>
+        <div class="project-info">
+          <h4>Project Two</h4>
+          <p>In the works.</p>
+          <span class="project-link">View →</span>
+        </div>
+      </div>
+
+      <div class="project-card card rotate-left-sm"
+           onclick="openProjectModal(this)"
+           data-title="Project Three"
+           data-desc="In the works."
+           data-img=""
+           data-color="#6F4D38">
+        <div class="push-pin pin-small pin-coffee"></div>
+        <div class="project-img" style="background: #6F4D38;"></div>
+        <div class="project-info">
+          <h4>Project Three</h4>
+          <p>In the works.</p>
+          <span class="project-link">View →</span>
+        </div>
+      </div>
+
+      <div class="project-card card rotate-right-sm"
+           onclick="openProjectModal(this)"
+           data-title="Project Four"
+           data-desc="In the works."
+           data-img=""
+           data-color="#632024">
+        <div class="push-pin pin-small pin-caput"></div>
+        <div class="project-img" style="background: #632024;"></div>
+        <div class="project-info">
+          <h4>Project Four</h4>
+          <p>In the works.</p>
+          <span class="project-link">View →</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======= BYTES OF WISDOM ======= -->
+  <section class="wisdom-section" id="wisdom">
+    <div class="section-header">
+      <div class="section-tape"></div>
+      <h2 class="section-title">Bytes of Wisdom</h2>
+    </div>
+    <p class="wisdom-intro">Mantras, lessons, and habits that keep me grounded and growing.</p>
+
+    <div class="wisdom-grid">
+
+      <div class="wisdom-card card rotate-left">
+        <div class="washi-tape washi-tan"></div>
+        <div class="push-pin pin-small"></div>
+        <p class="wisdom-label">motto</p>
+        <p class="wisdom-quote">Everything you aren't changing, you are choosing</p>
+        <p class="wisdom-sub">A reminder that inaction is still a choice — and I own mine.</p>
+      </div>
+
+      <div class="wisdom-card card rotate-right">
+        <div class="washi-tape washi-coffee"></div>
+        <div class="push-pin pin-small pin-coffee"></div>
+        <p class="wisdom-label">motto</p>
+        <p class="wisdom-quote">Own lane, Own race, Own pace</p>
+        <p class="wisdom-sub">Staying in my lane and trusting my own timeline, not anyone else's.</p>
+      </div>
+
+      <div class="wisdom-card card rotate-left-sm">
+        <div class="washi-tape washi-caput"></div>
+        <div class="push-pin pin-small pin-caput"></div>
+        <p class="wisdom-label">motto</p>
+        <p class="wisdom-quote">Productive women don't wait for change</p>
+        <p class="wisdom-sub">Staying proactive, not reactive — building the life I want instead of waiting for it.</p>
+      </div>
+
+      <div class="wisdom-card card rotate-right-sm">
+        <div class="washi-tape washi-slate"></div>
+        <div class="push-pin pin-small pin-slate"></div>
+        <p class="wisdom-label">concept</p>
+        <p class="wisdom-quote">Sound vs Signal</p>
+        <p class="wisdom-sub">Learning to tune out noise and act on what actually matters.</p>
+      </div>
+
+      <div class="wisdom-card card rotate-left">
+        <div class="washi-tape washi-tan"></div>
+        <div class="push-pin pin-small pin-caput"></div>
+        <p class="wisdom-label">habit</p>
+        <p class="wisdom-quote">Ted Talks</p>
+        <p class="wisdom-sub">Curating perspectives that expand how I see the world.</p>
+      </div>
+
+      <div class="wisdom-card card rotate-right">
+        <div class="washi-tape washi-coffee"></div>
+        <div class="push-pin pin-small pin-slate"></div>
+        <p class="wisdom-label">habit</p>
+        <p class="wisdom-quote">Journaling</p>
+        <p class="wisdom-sub">Processing thoughts, tracking growth, and staying intentional.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======= FOOTER / CONTACT ======= -->
+  <footer class="footer" id="contact">
+    <div class="footer-tape"></div>
+    <div class="footer-inner">
+      <p class="footer-name">Vivienne McGaha</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/vivienne-mcgaha/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/viv2612" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.instagram.com/vqiaoo/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="mailto:vmcgaha@ufl.edu" class="social-link" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+      <p class="footer-copy">© 2025 Vivienne McGaha</p>
+      <p class="footer-updated">last updated Feb 2026</p>
+    </div>
+  </footer>
+
+  <!-- Project Modal -->
+  <div class="project-modal-overlay" id="projectModal" onclick="closeProjectModal(event)">
+    <div class="project-modal-box">
+      <button class="modal-close" onclick="closeProjectModal()">&times;</button>
+      <div class="modal-img" id="modalImg"></div>
+      <div class="modal-body">
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc"></p>
+        <p id="modalDetail" class="modal-detail"></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openProjectModal(card) {
+      document.getElementById('modalTitle').textContent = card.dataset.title;
+      document.getElementById('modalDesc').textContent = card.dataset.desc;
+      const detail = document.getElementById('modalDetail');
+      detail.textContent = card.dataset.detail || '';
+      detail.style.display = card.dataset.detail ? 'block' : 'none';
+      const existingLine = detail.querySelector('.modal-link-line');
+      if (existingLine) existingLine.remove();
+      if (card.dataset.linkLine && card.dataset.linkUrl) {
+        const p = document.createElement('p');
+        p.className = 'modal-link-line';
+        p.appendChild(document.createTextNode(card.dataset.linkLine + ' '));
+        const a = document.createElement('a');
+        a.href = card.dataset.linkUrl;
+        a.textContent = card.dataset.linkUrl;
+        a.target = '_blank';
+        a.rel = 'noopener';
+        p.appendChild(a);
+        detail.appendChild(p);
+      }
+      const imgEl = document.getElementById('modalImg');
+      if (card.dataset.img) {
+        imgEl.style.backgroundImage = `url('${card.dataset.img}')`;
+        imgEl.style.backgroundSize = 'cover';
+        imgEl.style.backgroundPosition = 'center';
+      } else {
+        imgEl.style.backgroundImage = 'none';
+        imgEl.style.background = card.dataset.color || 'var(--slate-gray)';
+      }
+      document.getElementById('projectModal').classList.add('active');
+    }
+    function closeProjectModal(e) {
+      if (!e || e.target === document.getElementById('projectModal') || e.currentTarget.classList.contains('modal-close')) {
+        document.getElementById('projectModal').classList.remove('active');
+      }
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') document.getElementById('projectModal').classList.remove('active'); });
+  </script>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

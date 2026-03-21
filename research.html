@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research — Vivienne McGaha</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+
+  <!-- ======= NAVIGATION ======= -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">Vivienne McGaha</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="academics.html">Academics</a></li>
+      <li><a href="journal.html">Journal</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="cv.html">CV</a></li>
+    </ul>
+  </nav>
+
+  <!-- ======= RESEARCH CONTENT ======= -->
+  <main class="page-main">
+
+    <div class="section-header">
+      <div class="section-tape"></div>
+      <h2 class="section-title">Research</h2>
+    </div>
+
+    <div class="research-layout">
+
+      <!-- Research card -->
+      <div class="research-card card">
+        <div class="washi-tape washi-tan"></div>
+        <div class="push-pin pin-small pin-coffee"></div>
+        <h3 class="card-label">Home Spillover Effect on Work Effectiveness and Efficiency</h3>
+        <span class="research-status">In Progress</span>
+        <p class="research-date">November 2025 – Present</p>
+        <p class="card-text">Analyzing how positive and negative experiences at home impact an individual's work performance</p>
+        <ul class="research-responsibilities">
+          <li>Conduct literature searches, reviews, and summaries to support ongoing research projects and identify relevant theoretical frameworks</li>
+          <li>Design, create, and edit Qualtrics surveys to collect data aligned with research objectives</li>
+          <li>Built and optimized Excel-based code to streamline analysis of large datasets (200+ columns), reducing manual sorting time and enhancing data insights</li>
+        </ul>
+        <div class="research-skills">
+          <span class="skill-tag">Search Engine Optimization</span>
+          <span class="skill-tag">Data Scraping</span>
+          <span class="skill-tag">Attention to Detail</span>
+        </div>
+      </div>
+
+      <!-- Polaroid + caption -->
+      <div class="research-right">
+        <div class="research-photo">
+          <div class="push-pin pin-small pin-slate"></div>
+          <img src="images/ursp poster presentation.jpg" alt="URSP Poster Presentation" onclick="openLightbox(this)">
+          <p class="polaroid-caption">URSP Poster Presentation</p>
+        </div>
+        <div class="research-postcard card">
+          <div class="washi-tape washi-caput"></div>
+          <p class="card-text">This is the poster I presented with 4 peers at the Fall Research and Creativity Poster Symposium. We discuss the possibility of introducing wind or solar power to UF campus to make a greener campus, and which renewable energy source would be most effective for UF.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script>
+    function openLightbox(img) {
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox').classList.add('active');
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+  </script>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="footer" id="contact">
+    <div class="footer-tape"></div>
+    <div class="footer-inner">
+      <p class="footer-name">Vivienne McGaha</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/vivienne-mcgaha/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/viv2612" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.instagram.com/vqiaoo/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="mailto:vmcgaha@ufl.edu" class="social-link" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+      <p class="footer-copy">© 2025 Vivienne McGaha</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
