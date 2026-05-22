@@ -236,39 +236,39 @@ a {
 
 .hero-koi-deco {
   position: absolute;
-  bottom: -30px;
-  left: -50px;
-  width: 540px;
-  opacity: 0.96;
+  bottom: -50px;
+  left: -70px;
+  width: 640px;
+  opacity: 0.97;
   pointer-events: none;
   z-index: 2;
 }
 
 .hero-flowers-deco {
   position: absolute;
-  bottom: 140px;
-  left: 380px;
-  width: 120px;
-  opacity: 0.88;
+  bottom: 190px;
+  left: 300px;
+  width: 130px;
+  opacity: 0.90;
   pointer-events: none;
   z-index: 3;
 }
 
 .hero-leaves-deco {
   position: absolute;
-  bottom: -30px;
-  left: 250px;
-  width: 340px;
-  opacity: 0.82;
+  bottom: -50px;
+  left: 120px;
+  width: 440px;
+  opacity: 0.85;
   pointer-events: none;
   z-index: 1;
 }
 
 .hero-koi-right {
   position: absolute;
-  bottom: -20px;
-  right: -30px;
-  width: 300px;
+  bottom: -40px;
+  right: -50px;
+  width: 340px;
   opacity: 0.88;
   pointer-events: none;
   z-index: 3;
@@ -276,12 +276,12 @@ a {
 }
 
 .hero-stickies {
-  flex: 0 0 auto;
+  position: absolute;
+  right: 1.2rem;
+  top: 3rem;
   display: flex;
   flex-direction: column;
-  gap: 0.55rem;
-  padding-top: 3rem;
-  align-self: flex-start;
+  gap: 0.5rem;
   z-index: 5;
 }
 .hero-sticky {
@@ -305,22 +305,21 @@ a {
 
 /* --- Portrait wrap (hero-right top) ----------------------- */
 .hero-portrait-wrap {
-  flex: 1;
-  min-width: 0;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.5rem;
   transform: rotate(-1.5deg);
-  padding-top: 1.2rem;
+  padding-top: 2rem;
+  z-index: 2;
 }
 
 .hero-portrait {
   width: 100%;
-  max-width: 290px;
+  max-width: 370px;
   display: block;
-  filter: drop-shadow(4px 8px 20px rgba(0, 0, 0, 0.45));
+  filter: drop-shadow(4px 10px 24px rgba(0, 0, 0, 0.35));
 }
 
 .hero-corner-text {
@@ -382,11 +381,9 @@ a {
   background: transparent;
   position: relative;
   display: flex;
-  flex-direction: row;
   align-items: flex-start;
   justify-content: center;
-  padding: 2.5rem 0.8rem 2.5rem 1.5rem;
-  gap: 0.6rem;
+  padding: 2.5rem 1rem;
   overflow: visible;
 }
 
@@ -1611,21 +1608,19 @@ a {
   }
 
   .hero-right {
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 3rem 2rem;
     overflow: hidden;
   }
   .hero-portrait-wrap {
     transform: none;
-    width: 100%;
   }
 
   .hero-star, .hero-stickies { display: none; }
-  .hero-right::after { display: none; }
   .hero-name { font-size: clamp(3rem, 10vw, 4rem); }
   .hero-koi-deco, .hero-flowers-deco, .hero-leaves-deco, .hero-koi-right { display: none; }
-  .hero-portrait { max-width: 240px; }
+  .hero-portrait { max-width: 260px; }
 
   .about-card,
   .obsessions-card {
