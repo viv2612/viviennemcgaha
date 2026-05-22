@@ -5,14 +5,20 @@
 
 /* --- CSS Variables ----------------------------------------- */
 :root {
-  --space-cadet:  #25344F;
-  --slate-gray:   #617891;
-  --tan:          #D5B893;
-  --coffee:       #6F4D38;
-  --caput:        #632024;
-  --cream:        #F5EFE0;
+  --space-cadet:  #1E2D48;
+  --slate-gray:   #6D8BA7;
+  --tan:          #D29B27;
+  --coffee:       #4A3628;
+  --caput:        #682D2D;
+  --cream:        #F5EFE6;
   --off-white:    #FAF6EE;
   --white:        #FFFFFF;
+  --olive:        #4F5A3A;
+  --sage:         #A9B18A;
+  --kraft:        #D2B48C;
+  --blush:        #E78781;
+  --beige:        #E7D9C3;
+  --charcoal:     #1A1A1A;
 }
 
 /* --- Reset & Base ------------------------------------------ */
@@ -45,12 +51,12 @@ a {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: var(--space-cadet);
+  background-color: var(--olive);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1.1rem 3.5rem;
-  box-shadow: 0 2px 14px rgba(37, 52, 79, 0.35);
+  box-shadow: 0 2px 14px rgba(79, 90, 58, 0.35);
 }
 
 .nav-brand {
@@ -109,169 +115,237 @@ a {
    ============================================================ */
 .hero {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.35fr 1fr;
   min-height: calc(100vh - 58px);
+  position: relative;
+  overflow: visible;
 }
 
 /* --- Left Panel -------------------------------------------- */
 .hero-left {
-  background-color: var(--space-cadet);
+  background-color: var(--cream);
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 4rem 3rem 4rem;
-  gap: 2rem;
-  overflow: hidden;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 4.5rem 3.5rem 2rem 3.5rem;
+  gap: 0.85rem;
+  overflow: visible;
+}
+
+.hero-greeting {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.1rem;
+  color: var(--olive);
+  font-style: italic;
+  margin-bottom: -0.6rem;
 }
 
 .hero-name {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(2.4rem, 4.5vw, 3.75rem);
+  font-size: clamp(3.8rem, 6.5vw, 5.5rem);
   font-weight: 900;
-  color: var(--off-white);
-  text-align: center;
-  line-height: 1.1;
+  color: var(--charcoal);
+  text-align: left;
+  line-height: 1.05;
   letter-spacing: 0.02em;
 }
 
-.profile-outline {
-  width: 260px;
-  object-fit: contain;
-  flex-shrink: 0;
-  position: relative;
-  z-index: 3;
+.hero-tagline {
+  font-size: 0.8rem;
+  color: var(--olive);
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
-/* --- Sticker Decorations ----------------------------------- */
+.hero-desc {
+  font-size: 0.95rem;
+  color: var(--charcoal);
+  line-height: 1.75;
+  max-width: 420px;
+  opacity: 0.85;
+}
 
-/* Sticker sheets: screen blend so dark backgrounds fade, gold/stars glow */
-.sticker-deco {
+.hero-viv-badge {
   position: absolute;
-  pointer-events: none;
-  user-select: none;
-  mix-blend-mode: screen;
-  z-index: 2;
+  top: 1.4rem;
+  left: 1.4rem;
+  font-size: 0.65rem;
+  color: var(--olive);
+  border: 1.5px solid var(--olive);
+  padding: 0.22rem 0.6rem;
+  border-radius: 20px;
+  letter-spacing: 0.14em;
+  font-weight: 500;
 }
 
-/* Individual stickers (stamp, badge): real visible stickers, no blend */
-.sticker-solo {
+.hero-star {
   position: absolute;
+  color: var(--tan);
   pointer-events: none;
-  user-select: none;
-  z-index: 2;
-}
-
-/*
-  Layout — 8 zones, no overlaps:
-  ┌──────────────┬──────────────┐
-  │  ace(tl)     │ horoscope(tr)│  row 1
-  ├──────────────┼──────────────┤
-  │  great wave  │              │  row 2
-  │  (gw)        │  quirky(tc)  │
-  ├──────────────┼──────────────┤
-  │  gold&blue   │  vinyl(mr)   │  row 3
-  │  (ml)        │              │
-  ├──────────────┼──────────────┤
-  │constellation │  snoopy(sn)  │  row 4
-  │  (bl) cut off│              │
-  └──────────────┴──────────────┘
-*/
-
-/* ace of hearts — top-left */
-.sticker-tl {
-  width: 155px;
-  opacity: 0.38;
-  top: 14px;
-  left: 14px;
-  transform: rotate(-9deg);
-}
-
-/* star chart — top-right, no tilt, outer edges (top+right) bleed off panel */
-.sticker-tr {
-  width: 255px;
+  font-size: 0.9rem;
   opacity: 0.55;
-  top: -18px;
-  right: -18px;
-  transform: none;
+}
+.hs-1 { top: 12%; right: 8%; font-size: 1.1rem; }
+.hs-2 { top: 38%; right: 4%; font-size: 0.7rem; opacity: 0.4; }
+.hs-3 { top: 60%; right: 10%; }
+.hs-4 { top: 25%; left: 35%; font-size: 0.6rem; opacity: 0.35; }
+
+.hero-social-row {
+  display: flex;
+  gap: 1rem;
+  margin-top: -0.2rem;
+}
+.hero-social-row a {
+  color: var(--olive);
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+.hero-social-row a:hover { color: var(--tan); }
+
+.hero-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.hero-chip {
+  background: rgba(79, 90, 58, 0.12);
+  border: 1px solid rgba(79, 90, 58, 0.3);
+  border-radius: 20px;
+  padding: 0.18rem 0.7rem;
+  font-size: 0.75rem;
+  color: var(--olive);
+  letter-spacing: 0.07em;
 }
 
-/* great wave stamp — upper-left below ace */
-.sticker-gw {
-  width: 160px;
-  opacity: 0.62;
-  top: 32%;
-  left: 16px;
-  transform: rotate(-11deg);
+.hero-learn-more {
+  display: inline-block;
+  background: var(--olive);
+  color: var(--cream);
+  font-size: 0.8rem;
+  padding: 0.38rem 1rem;
+  border-radius: 20px;
+  letter-spacing: 0.07em;
+  transition: background 0.2s;
+}
+.hero-learn-more:hover { background: var(--coffee); }
+
+.hero-koi-deco {
+  position: absolute;
+  bottom: -30px;
+  left: -50px;
+  width: 540px;
+  opacity: 0.96;
+  pointer-events: none;
+  z-index: 2;
 }
 
-/* quirky star — mid-right */
-.sticker-tc {
-  width: 175px;
-  opacity: 0.44;
-  top: 33%;
-  right: 14px;
-  transform: rotate(-8deg);
-}
-
-/* gold & blue flower stamp — lower-left */
-.sticker-ml {
-  width: 155px;
-  opacity: 0.40;
-  top: 54%;
-  left: 14px;
-  transform: rotate(10deg);
-}
-
-/* vinyl — lower-right, partially off right edge */
-.sticker-mr {
-  width: 185px;
-  opacity: 0.32;
-  top: 52%;
-  right: -20px;
-  transform: rotate(-7deg);
-}
-
-/* constellations — bottom-left, no tilt, outer edges (bottom+left) bleed off panel */
-.sticker-bl {
-  width: 255px;
-  opacity: 0.60;
-  bottom: -18px;
-  left: -18px;
-  transform: none;
-}
-
-/* Snoopy badge — bottom-right, fully visible */
-.sticker-sn {
-  width: 165px;
-  opacity: 0.68;
-  bottom: 6%;
-  right: 14px;
-  transform: rotate(11deg);
-}
-
-/* Ensure content stays above sticker layer */
-.hero-name,
-.personal-tags {
-  position: relative;
+.hero-flowers-deco {
+  position: absolute;
+  bottom: 140px;
+  left: 380px;
+  width: 120px;
+  opacity: 0.88;
+  pointer-events: none;
   z-index: 3;
 }
 
-/* Stars sit between background and stickers (not on top of images) */
-.star { z-index: 1; }
+.hero-leaves-deco {
+  position: absolute;
+  bottom: -30px;
+  left: 250px;
+  width: 340px;
+  opacity: 0.82;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-koi-right {
+  position: absolute;
+  bottom: -20px;
+  right: -30px;
+  width: 300px;
+  opacity: 0.88;
+  pointer-events: none;
+  z-index: 3;
+  transform: scaleX(-1);
+}
+
+.hero-stickies {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding-top: 3rem;
+  align-self: flex-start;
+  z-index: 5;
+}
+.hero-sticky {
+  background: #f0ebe0;
+  border-radius: 2px;
+  padding: 0.48rem 0.85rem;
+  font-size: 0.68rem;
+  font-style: italic;
+  color: #3a2e1e;
+  box-shadow: 2px 3px 9px rgba(0, 0, 0, 0.35);
+  white-space: nowrap;
+}
+.hero-sticky::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background: rgba(0, 0, 0, 0.06);
+  margin: -0.48rem -0.85rem 0.4rem;
+  border-radius: 2px 2px 0 0;
+}
+
+/* --- Portrait wrap (hero-right top) ----------------------- */
+.hero-portrait-wrap {
+  flex: 1;
+  min-width: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  transform: rotate(-1.5deg);
+  padding-top: 1.2rem;
+}
+
+.hero-portrait {
+  width: 100%;
+  max-width: 290px;
+  display: block;
+  filter: drop-shadow(4px 8px 20px rgba(0, 0, 0, 0.45));
+}
+
+.hero-corner-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.82rem;
+  color: var(--cream);
+  text-align: center;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.hero-day-text {
+  font-size: 0.75rem;
+  color: var(--cream);
+  text-align: center;
+  opacity: 0.65;
+}
 
 /* --- Zodiac + MBTI Tags ------------------------------------ */
 .personal-tags {
-  background: rgba(20, 33, 55, 0.65);
-  border: 1px solid rgba(213, 184, 147, 0.28);
+  background: rgba(79, 90, 58, 0.1);
+  border: 1px solid rgba(79, 90, 58, 0.3);
   border-radius: 10px;
   padding: 0.8rem 1.2rem;
   display: flex;
   flex-direction: column;
   gap: 0.38rem;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
 }
 
 .tag-row {
@@ -279,7 +353,7 @@ a {
   align-items: center;
   gap: 0.5rem;
   font-size: 0.9rem;
-  color: var(--cream);
+  color: var(--charcoal);
   letter-spacing: 0.04em;
 }
 
@@ -292,47 +366,39 @@ a {
 
 .tag-divider {
   height: 1px;
-  background: rgba(213, 184, 147, 0.22);
+  background: rgba(79, 90, 58, 0.25);
   margin: 0.15rem 0;
 }
 
 .tag-mbti {
-  color: var(--tan);
-  font-weight: 500;
+  color: var(--olive);
+  font-weight: 600;
 }
-
-/* Decorative stars on left panel */
-.star {
-  position: absolute;
-  color: var(--tan);
-  pointer-events: none;
-  user-select: none;
-  font-style: normal;
-}
-
-.star-1 { top: 12%;  left: 12%;  font-size: 1.4rem; opacity: 0.6; }
-.star-2 { top: 18%;  right: 14%; font-size: 0.7rem; opacity: 0.45; }
-.star-3 { top: 38%;  right: 8%;  font-size: 0.95rem; opacity: 0.55; }
-.star-4 { bottom: 28%; left: 9%; font-size: 0.85rem; opacity: 0.5; }
-.star-5 { bottom: 14%; right: 12%; font-size: 1.2rem; opacity: 0.6; }
-.star-6 { top: 60%;  left: 18%;  font-size: 2.2rem; opacity: 0.2; }
-.star-7 { top: 6%;   right: 30%; font-size: 0.6rem; opacity: 0.4; }
 
 /* --- Right Panel ------------------------------------------- */
 .hero-right {
-  background-color: var(--tan);
-  background-image:
-    linear-gradient(rgba(37, 52, 79, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(37, 52, 79, 0.1) 1px, transparent 1px);
-  background-size: 24px 24px;
+  background-color: #141e2b;
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
   justify-content: center;
-  padding: 2.5rem 2.5rem 2.5rem 3rem;
-  gap: 1.2rem;
-  overflow: hidden;
+  padding: 2.5rem 0.8rem 2.5rem 1.5rem;
+  gap: 0.6rem;
+  overflow: visible;
+}
+
+.hero-right::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  background: url('images/redesign 1/torn paper.png') center top / 100% 100% no-repeat;
+  transform: scaleY(-1);
+  pointer-events: none;
+  z-index: 0;
 }
 
 /* Dot/grid decoration in top-right corner */
@@ -342,9 +408,9 @@ a {
   right: 2rem;
   width: 140px;
   height: 110px;
-  background-image: radial-gradient(circle, rgba(37, 52, 79, 0.35) 1.5px, transparent 1.5px);
+  background-image: radial-gradient(circle, rgba(79, 90, 58, 0.3) 1.5px, transparent 1.5px);
   background-size: 14px 14px;
-  border: 1.5px solid rgba(37, 52, 79, 0.2);
+  border: 1.5px solid rgba(79, 90, 58, 0.18);
   border-radius: 4px;
 }
 
@@ -354,9 +420,7 @@ a {
 #loader {
   position: fixed;
   inset: 0;
-  /* Option 1 (dark):  background: #25344F; */
-  /* Option 2 (light): background: #FAF6EE; */
-  background: #25344F;
+  background: var(--space-cadet);
   z-index: 9999;
   pointer-events: none;
 }
@@ -403,9 +467,7 @@ a {
   opacity: 0;
   stroke-dasharray: 600;
   stroke-dashoffset: 600;
-  /* Option 1 (dark):  filter: drop-shadow(0 0 3px rgba(213,184,147,0.7)); */
-  /* Option 2 (light): filter: drop-shadow(0 0 3px rgba(37,52,79,0.25)); */
-  filter: drop-shadow(0 0 3px rgba(213,184,147,0.7));
+  filter: drop-shadow(0 0 3px rgba(210,155,39,0.7));
   animation: ldr-draw-star 1.6s cubic-bezier(0.4, 0, 0.2, 1) forwards 0.5s;
 }
 
@@ -1529,9 +1591,28 @@ a {
 }
 
 /* ============================================================
+   ABOUT PAGE
+   ============================================================ */
+.about-page-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.about-page-left,
+.about-page-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 900px) {
+  .about-page-layout { grid-template-columns: 1fr; }
+
   .navbar { padding: 1rem 2rem; }
   .hero { grid-template-columns: 1fr; }
 
@@ -1541,9 +1622,21 @@ a {
   }
 
   .hero-right {
-    padding: 3.5rem 2rem;
+    flex-direction: column;
     align-items: center;
+    padding: 3rem 2rem;
+    overflow: hidden;
   }
+  .hero-portrait-wrap {
+    transform: none;
+    width: 100%;
+  }
+
+  .hero-star, .hero-stickies { display: none; }
+  .hero-right::after { display: none; }
+  .hero-name { font-size: clamp(3rem, 10vw, 4rem); }
+  .hero-koi-deco, .hero-flowers-deco, .hero-leaves-deco, .hero-koi-right { display: none; }
+  .hero-portrait { max-width: 240px; }
 
   .about-card,
   .obsessions-card {
@@ -1565,7 +1658,7 @@ a {
     gap: 0;
     position: absolute;
     top: 100%; left: 0; right: 0;
-    background: var(--space-cadet);
+    background: var(--olive);
     border-bottom: 2px solid var(--tan);
     padding: 0.5rem 0;
     z-index: 999;
