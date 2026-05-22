@@ -324,7 +324,7 @@ a {
 .hero-corner-text {
   font-family: 'Playfair Display', serif;
   font-size: 0.82rem;
-  color: var(--cream);
+  color: var(--olive);
   text-align: center;
   font-style: italic;
   opacity: 0.9;
@@ -332,9 +332,9 @@ a {
 
 .hero-day-text {
   font-size: 0.75rem;
-  color: var(--cream);
+  color: var(--slate-gray);
   text-align: center;
-  opacity: 0.65;
+  opacity: 0.85;
 }
 
 /* --- Zodiac + MBTI Tags ------------------------------------ */
@@ -377,7 +377,7 @@ a {
 
 /* --- Right Panel ------------------------------------------- */
 .hero-right {
-  background-color: #141e2b;
+  background-color: var(--cream);
   position: relative;
   display: flex;
   flex-direction: row;
@@ -386,19 +386,6 @@ a {
   padding: 2.5rem 0.8rem 2.5rem 1.5rem;
   gap: 0.6rem;
   overflow: visible;
-}
-
-.hero-right::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 90px;
-  background: url('images/redesign 1/torn paper.png') center top / 100% 100% no-repeat;
-  transform: scaleY(-1);
-  pointer-events: none;
-  z-index: 0;
 }
 
 /* Dot/grid decoration in top-right corner */
