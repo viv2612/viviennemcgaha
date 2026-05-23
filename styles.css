@@ -177,7 +177,7 @@ a {
   position: absolute;
   top: 0.6rem;
   left: 0.6rem;
-  width: 130px;
+  width: clamp(140px, 17vw, 210px);
   pointer-events: none;
   z-index: 5;
   mix-blend-mode: multiply;
@@ -316,8 +316,7 @@ a {
 }
 
 .hero-portrait {
-  width: 100%;
-  max-width: 370px;
+  width: clamp(340px, 75%, 520px);
   display: block;
   filter: drop-shadow(4px 10px 24px rgba(0, 0, 0, 0.35));
 }
