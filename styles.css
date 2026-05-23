@@ -175,9 +175,9 @@ a {
 
 .hero-sig {
   position: absolute;
-  top: 0.6rem;
-  left: 0.6rem;
-  width: clamp(140px, 17vw, 210px);
+  top: 0.4rem;
+  left: 0.4rem;
+  width: clamp(180px, 22vw, 280px);
   pointer-events: none;
   z-index: 5;
   mix-blend-mode: multiply;
@@ -246,20 +246,20 @@ a {
 
 .hero-flowers-deco {
   position: absolute;
-  bottom: 190px;
-  left: 300px;
-  width: 130px;
-  opacity: 0.90;
+  bottom: 35%;
+  left: 340px;
+  width: 150px;
+  opacity: 0.92;
   pointer-events: none;
   z-index: 3;
 }
 
 .hero-leaves-deco {
   position: absolute;
-  bottom: -50px;
-  left: 120px;
-  width: 440px;
-  opacity: 0.85;
+  bottom: 20%;
+  left: 160px;
+  width: 400px;
+  opacity: 0.88;
   pointer-events: none;
   z-index: 1;
 }
