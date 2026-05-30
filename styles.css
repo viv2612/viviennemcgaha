@@ -2554,9 +2554,7 @@ a {
     padding: 3rem 2rem;
     overflow: hidden;
   }
-  .hero-portrait-wrap {
-    transform: none;
-  }
+  .hero-portrait-wrap { transform: none; }
 
   .hero-stickies { display: none; }
   .hero-name { font-size: clamp(3rem, 10vw, 4rem); }
@@ -2571,6 +2569,66 @@ a {
   }
 
   .projects-section { padding: 4rem 2rem; }
+
+  /* About page */
+  .about-me-photo { width: 520px; }
+  .about-me-bio { flex: 0 0 380px; max-width: 380px; left: -40px; }
+  .about-sticky-img { width: 320px; }
+  .about-page-cards-col { flex-wrap: wrap; }
+  .about-card-img { width: 280px; }
+  .card-medium { width: 360px !important; }
+  .card-wide { width: 440px !important; }
+
+  /* Academics */
+  .academics-layout { padding-left: 2rem; gap: 3rem; }
+
+  /* Timeline */
+  .timeline-years-grid { grid-template-columns: 1fr; }
+}
+
+/* ---- Tablet (768px) ---------------------------------------- */
+@media (max-width: 768px) {
+  /* General */
+  .page-main { padding: 4rem 2.5rem 6rem; }
+
+  /* Section header overrides — reset heavy left margins */
+  .about-page .section-header { margin-left: 5% !important; }
+  .academics-main .section-header { margin-left: 5% !important; }
+  .journal-page .page-main .section-header { margin-left: 5% !important; }
+  .gallery-page .page-main .section-header { margin-left: 5% !important; }
+  .research-page .page-main .section-header { margin-left: 5% !important; }
+
+  /* About page */
+  .about-image-top { flex-wrap: wrap; gap: 1.5rem; }
+  .about-me-photo { width: 100%; max-width: 420px; margin-top: 0; margin-left: 0; }
+  .about-me-bio { flex: 1 1 100%; max-width: 100%; left: 0; font-size: 1rem; }
+  .about-side-cards { width: 100%; }
+  .about-sticky-wrap { margin-top: 0; transform: none; }
+  .about-sticky-img { width: 100%; max-width: 340px; }
+  .about-page-cards-col { flex-wrap: wrap; justify-content: center; }
+  .about-card-img { width: 260px; }
+  .future-goals-img { width: 100% !important; }
+  .about-sticker, .about-flowers { display: none; }
+
+  /* Academics */
+  .academics-layout { flex-direction: column; padding-left: 0; gap: 2rem; }
+  .academics-top-row { flex-wrap: wrap; gap: 2rem; }
+  .academics-bottom-row { flex-direction: column; }
+  .card-medium, .card-wide { width: 100% !important; }
+  .academics-photos-col { width: 100%; align-items: flex-start; }
+
+  /* Timeline */
+  .timeline-years-grid { grid-template-columns: 1fr; }
+  .timeline-semesters { grid-template-columns: 1fr; }
+  .timeline-outer-card { padding: 1.5rem 1.25rem !important; }
+
+  /* Gallery */
+  .gallery-grid { gap: 2rem; }
+  .gallery-item { width: 100%; }
+
+  /* Research */
+  .research-layout { flex-direction: column; gap: 2rem; }
+  .research-card { width: 100%; max-width: 100%; }
 }
 
 @media (max-width: 600px) {
@@ -2621,8 +2679,9 @@ a {
   .research-photo { width: 100%; max-width: 100%; height: auto; }
 
   /* Academics */
-  .academics-layout { flex-direction: column; gap: 2rem; }
+  .academics-layout { flex-direction: column; gap: 2rem; padding-left: 0; }
   .academics-top-row { flex-direction: column; gap: 2rem; }
+  .academics-bottom-row { flex-direction: column; gap: 2rem; }
   .academics-card { width: 100%; }
   .academics-photos-col { width: 100%; }
   .polaroid-cluster { width: 100%; height: auto; position: static; }
@@ -2630,6 +2689,16 @@ a {
   .polaroid-cluster .polaroid:last-child { position: static; transform: none; }
   .polaroid { width: 100%; max-width: 100%; }
   .postcard { width: 100%; }
+
+  /* Timeline */
+  .timeline-years-grid { grid-template-columns: 1fr; }
+  .timeline-semesters { grid-template-columns: 1fr; }
+
+  /* About */
+  .about-me-bio { left: 0; max-width: 100%; flex: 1 1 100%; }
+  .about-page-cards-col { flex-direction: column; align-items: center; }
+  .about-card-img { width: 100%; max-width: 340px; }
+  .future-goals-img { width: 100% !important; }
 
   /* CV */
   .cv-entry-row { display: flex; flex-direction: column; gap: 0.2rem; }
