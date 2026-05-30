@@ -1767,7 +1767,7 @@ a {
   gap: 5rem;
   align-items: flex-start;
   margin-top: 1rem;
-  padding-left: 6rem;
+  padding-left: 1rem;
 }
 
 .academics-grid {
@@ -1785,7 +1785,7 @@ a {
 }
 
 .card-wide {
-  width: 620px !important;
+  width: 540px !important;
 }
 
 .card-medium {
@@ -1794,7 +1794,7 @@ a {
 
 /* ======= UF COURSEWORK TIMELINE ======= */
 .uf-timeline {
-  margin-top: 4rem;
+  margin-top: -10rem;
   padding: 2rem 0 0;
 }
 
@@ -1933,6 +1933,31 @@ a {
 }
 
 .card-navy .card-label,
+.card-navy .academics-list li,
+.card-navy .card-text {
+  color: #fff !important;
+}
+
+.gpa-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.academic-flowers-img {
+  display: block;
+  width: 280px;
+  height: auto;
+  pointer-events: none;
+  margin-top: -60px;
+  position: relative;
+  top: 200px;
+  left: 370px;
+  z-index: 10;
+  transform: rotate(-15deg);
+}
+
 .card-navy .academics-list li,
 .card-navy .card-text {
   color: #fff !important;
