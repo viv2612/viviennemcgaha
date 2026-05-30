@@ -1952,8 +1952,8 @@ a {
   pointer-events: none;
   margin-top: -60px;
   position: relative;
-  top: 200px;
-  left: 370px;
+  top: 80px;
+  left: 365px;
   z-index: 10;
   transform: rotate(-15deg);
 }
