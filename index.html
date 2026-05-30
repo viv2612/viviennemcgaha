@@ -6,7 +6,7 @@
   <title>Vivienne McGaha</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=Special+Elite&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -62,9 +62,14 @@
     })();
   </script>
 
+  <!-- Signature + leaves overlay -->
+  <div class="page-sig">
+    <img src="images/redesign 1/signature paper tare.png" alt="vqm">
+    <img src="images/redesign 1/leaves.png" class="page-sig-leaves" alt="">
+  </div>
+
   <!-- ======= NAVIGATION ======= -->
   <nav class="navbar">
-    <a href="#" class="nav-brand">Vivienne McGaha</a>
     <ul class="nav-links">
       <li><a href="#">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -82,19 +87,14 @@
   <!-- ======= HERO ======= -->
   <section class="hero" id="about">
 
-    <!-- Left panel: name + bio + tags -->
+    <!-- Left panel: name + bio -->
     <div class="hero-left">
 
-      <img src="images/redesign 1/signature paper tare.png" class="hero-sig" alt="vqm">
-
-      <span class="hero-star hs-1">✦</span>
-      <span class="hero-star hs-2">✦</span>
-      <span class="hero-star hs-3">✦</span>
-      <span class="hero-star hs-4">✦</span>
-
-      <p class="hero-greeting">hi, i'm</p>
-      <h1 class="hero-name">vivienne<br>mcgaha ♡</h1>
-      <p class="hero-tagline">finance student &nbsp;·&nbsp; creator &nbsp;·&nbsp; lifelong learner</p>
+      <div class="hero-name-group">
+        <p class="hero-greeting">hi, i'm</p>
+        <h1 class="hero-name">vivienne<br>mcgaha <span class="hero-heart">♡</span></h1>
+      </div>
+      <p class="hero-tagline">student &nbsp;·&nbsp; musician &nbsp;·&nbsp; creator</p>
 
       <div class="hero-social-row">
         <a href="https://www.linkedin.com/in/vivienne-mcgaha/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
@@ -105,46 +105,54 @@
 
       <p class="hero-desc">documenting growth, ideas, projects, and the little things that shape who i'm becoming.</p>
 
-      <a href="about.html" class="hero-learn-more">learn more ↓</a>
+      <a href="about.html" class="hero-learn-more">learn more about me ↓</a>
 
-      <img src="images/redesign 1/leaves.png" class="hero-leaves-deco" alt="">
-      <img src="images/redesign 1/flowers.png" class="hero-flowers-deco" alt="">
-      <img src="images/redesign 1/koi fish torn corner.png" class="hero-koi-deco" alt="">
     </div>
 
-    <!-- Right panel: portrait + stickies + koi -->
+    <div class="hero-koi-wrap">
+      <img src="images/redesign 1/koi fish & projects torn.png" class="hero-koi-deco" alt="">
+      <div class="hero-koi-projects-header">
+        <h2 class="hero-koi-projects-label">projects <span class="hero-koi-sparkles">✦ ✧ ✦</span></h2>
+        <img src="images/redesign 1/projects caption.png" class="hero-koi-projects-caption" alt="a collection of hackathon builds, passion projects, and experiments.">
+      </div>
+    </div>
+
+    <!-- Right panel: portrait + stickies + deco -->
     <div class="hero-right">
 
       <!-- Portrait -->
       <div class="hero-portrait-wrap">
         <img src="images/redesign 1/pixel art me with border.png" class="hero-portrait" alt="Vivienne McGaha">
-        <p class="hero-corner-text">a little corner of the internet ✦</p>
-        <p class="hero-day-text">one day at a time ♡</p>
+      </div>
+      <img src="images/redesign 1/corner of the internet.png" class="hero-corner-tag" alt="">
+      <img src="images/redesign 1/one day.png" class="hero-one-day" alt="">
+      <div class="hero-sticky-note-wrap">
+        <img src="images/redesign 1/current sticky note.png" class="hero-sticky-note" alt="">
+        <span class="hero-sticky-label">currently</span>
+        <ul class="hero-sticky-items">
+          <li>studying for classes</li>
+          <li>building a mechanical keyboard</li>
+          <li>exploring virginia</li>
+          <li>on the search for a matt maltese vinyl</li>
+        </ul>
       </div>
 
-      <!-- Sticky notes -->
-      <div class="hero-stickies">
-        <div class="hero-sticky">studying @ UF ✦</div>
-        <div class="hero-sticky">building cool projects</div>
-        <div class="hero-sticky">taking photos @</div>
-        <div class="hero-sticky">webmaster!</div>
-      </div>
+<!-- Flowers bottom-right -->
+      <img src="images/redesign 1/flowers.png" class="hero-flowers-deco" alt="">
 
-      <img src="images/redesign 1/koi fish torn corner.png" class="hero-koi-right" alt="">
     </div>
+
+    <img src="images/redesign 1/doodles/top left sparkle.png" class="hero-doodle hero-doodle-tl-sparkle" alt="">
+    <img src="images/redesign 1/doodles/top left heart.png" class="hero-doodle hero-doodle-tl-heart" alt="">
+    <img src="images/redesign 1/doodles/top right sparkle.png" class="hero-doodle hero-doodle-tr-sparkle" alt="">
+    <img src="images/redesign 1/doodles/top right orange sparkle.png" class="hero-doodle hero-doodle-tr-orange" alt="">
 
   </section>
 
-  <!-- Torn paper divider -->
-  <div class="hero-projects-tear" aria-hidden="true"></div>
-
-  <!-- ======= PROJECTS ======= -->
+<!-- ======= PROJECTS ======= -->
   <section class="projects-section" id="projects">
-    <div class="section-header">
-      <div class="section-tape"></div>
-      <h2 class="section-title">Projects</h2>
-    </div>
-
+    <img src="images/redesign 1/projects background edited 2.png?v=2" class="projects-bg-img" alt="">
+    <img src="images/redesign 1/doodles/projects doodle overlay edited.png" class="projects-doodle-overlay" alt="">
     <div class="projects-grid">
 
       <div class="project-card card rotate-left"
@@ -154,7 +162,8 @@
            data-detail="DataFables is an interactive storytelling platform that turns reading into a game: kids can pick from 6 genres, customize a protagonist, and make choices that change the story, while the reading experience adapts to their age range and typical Lexile level, includes pronunciation practice with instant feedback, rewards progress with XP and coins they can spend on character accessories, and supports 10 languages to make it accessible for more kids worldwide."
            data-link-line="Link to our Devpost ➤"
            data-link-url="https://devpost.com/software/hacklytics-2026"
-           data-img="images/datafables.png">
+           data-img="images/datafables.png"
+           data-color="#9B7EAE">
         <div class="push-pin pin-small"></div>
         <div class="project-img" style="background-image: url('images/datafables.png'); background-size: cover; background-position: center;">
           <div class="winner-badge">3rd Place · Entertainment Track</div>
@@ -171,9 +180,9 @@
            data-title="Project Two"
            data-desc="In the works."
            data-img=""
-           data-color="#617891">
+           data-color="#6D8BA7">
         <div class="push-pin pin-small pin-slate"></div>
-        <div class="project-img" style="background: #617891;"></div>
+        <div class="project-img" style="background: #6D8BA7;"></div>
         <div class="project-info">
           <h4>Project Two</h4>
           <p>In the works.</p>
@@ -186,9 +195,9 @@
            data-title="Project Three"
            data-desc="In the works."
            data-img=""
-           data-color="#6F4D38">
+           data-color="#A9B18A">
         <div class="push-pin pin-small pin-coffee"></div>
-        <div class="project-img" style="background: #6F4D38;"></div>
+        <div class="project-img" style="background: #A9B18A;"></div>
         <div class="project-info">
           <h4>Project Three</h4>
           <p>In the works.</p>
@@ -201,9 +210,9 @@
            data-title="Project Four"
            data-desc="In the works."
            data-img=""
-           data-color="#632024">
+           data-color="#D29B27">
         <div class="push-pin pin-small pin-caput"></div>
-        <div class="project-img" style="background: #632024;"></div>
+        <div class="project-img" style="background: #D29B27;"></div>
         <div class="project-info">
           <h4>Project Four</h4>
           <p>In the works.</p>
@@ -212,71 +221,55 @@
       </div>
 
     </div>
+
+    <div class="projects-heart-wrap">
+      <img src="images/redesign 1/doodles/beating heart doodle.png" class="projects-heart-doodle" alt="">
+    </div>
+
+    <div class="wisdom-title-row">
+      <h2 class="wisdom-title-overlap">bytes of wisdom</h2>
+      <img src="images/redesign 1/bytes of wisdom/orange sparkle.png" class="wisdom-title-sparkle" alt="">
+    </div>
+
   </section>
 
   <!-- ======= BYTES OF WISDOM ======= -->
   <section class="wisdom-section" id="wisdom">
-    <div class="section-header">
-      <div class="section-tape"></div>
-      <h2 class="section-title">Bytes of Wisdom</h2>
-    </div>
-    <p class="wisdom-intro">Mantras, lessons, and habits that keep me grounded and growing.</p>
+    <img src="images/redesign 1/bytes of wisdom background 2.png" class="wisdom-bg-img" alt="">
+    <img src="images/redesign 1/camera sticker.png" class="wisdom-sticker wisdom-sticker-left" alt="">
+    <img src="images/redesign 1/stargazer lily sticker.png" class="wisdom-sticker wisdom-sticker-right" alt="">
+    <img src="images/redesign 1/bytes of wisdom/blue heart.png" class="wisdom-doodle wisdom-doodle-blue-heart" alt="">
+    <img src="images/redesign 1/bytes of wisdom/blue sparkle.png" class="wisdom-doodle wisdom-doodle-blue-sparkle" alt="">
+    <img src="images/redesign 1/bytes of wisdom/orange & blue sparkle.png" class="wisdom-doodle wisdom-doodle-ob-sparkle" alt="">
+    <img src="images/redesign 1/bytes of wisdom/orange sparkle.png" class="wisdom-doodle wisdom-doodle-orange-sparkle-left" alt="">
+    <img src="images/redesign 1/bytes of wisdom/blue sparkle.png" class="wisdom-doodle wisdom-doodle-blue-sparkle-left" alt="">
+    <img src="images/redesign 1/bytes of wisdom/blue sparkle.png" class="wisdom-doodle wisdom-doodle-blue-sparkle-above-cam" alt="">
+    <img src="images/redesign 1/bytes of wisdom/orange sparkle.png" class="wisdom-doodle wisdom-doodle-orange-sparkle" alt="">
+    <img src="images/redesign 1/bytes of wisdom/orange sparkle.png" class="wisdom-doodle wisdom-doodle-orange-sparkle-lily" alt="">
+    <img src="images/redesign 1/bytes of wisdom/orange & blue sparkle.png" class="wisdom-doodle wisdom-doodle-ob-sparkle-lily" alt="">
+    <img src="images/redesign 1/laptop code sticker.png" class="wisdom-doodle wisdom-doodle-laptop" alt="">
+    <img src="images/redesign 1/bytes of wisdom/orange emphasis.png" class="wisdom-doodle wisdom-doodle-orange-emphasis" alt="">
+    <img src="images/redesign 1/bytes of wisdom/orange emphasis.png" class="wisdom-doodle wisdom-doodle-orange-emphasis-cam" alt="">
+    <img src="images/redesign 1/bytes of wisdom/blue heart.png" class="wisdom-doodle wisdom-doodle-blue-heart-right" alt="">
+    <div class="wisdom-content">
+    <p class="wisdom-intro">small notes, mottos, and reminders i'm collecting along the way.</p>
 
     <div class="wisdom-grid">
 
-      <div class="wisdom-card card rotate-left">
-        <div class="washi-tape washi-tan"></div>
-        <div class="push-pin pin-small"></div>
-        <p class="wisdom-label">motto</p>
-        <p class="wisdom-quote">Everything you aren't changing, you are choosing</p>
-        <p class="wisdom-sub">A reminder that inaction is still a choice — and I own mine.</p>
-      </div>
+      <img src="images/redesign 1/bytes of wisdom/own lane motto.png?v=2" class="wisdom-img-card rotate-right" alt="motto: Own lane, Own race, Own pace">
+      <img src="images/redesign 1/bytes of wisdom/change motto.png?v=2" class="wisdom-img-card rotate-left" alt="motto: Everything you aren't changing, you are choosing">
+      <img src="images/redesign 1/bytes of wisdom/productive women motto.png?v=2" class="wisdom-img-card rotate-left-sm" alt="motto: Productive women don't wait for change">
+      <img src="images/redesign 1/bytes of wisdom/sound signal concept.png?v=2" class="wisdom-img-card rotate-right-sm" alt="concept: Sound vs Signal">
+      <img src="images/redesign 1/bytes of wisdom/journaling habit.png?v=2" class="wisdom-img-card rotate-left" alt="habit: Journaling">
+      <img src="images/redesign 1/bytes of wisdom/ted talk habits.png?v=2" class="wisdom-img-card rotate-right" alt="habit: Ted Talks">
 
-      <div class="wisdom-card card rotate-right">
-        <div class="washi-tape washi-coffee"></div>
-        <div class="push-pin pin-small pin-coffee"></div>
-        <p class="wisdom-label">motto</p>
-        <p class="wisdom-quote">Own lane, Own race, Own pace</p>
-        <p class="wisdom-sub">Staying in my lane and trusting my own timeline, not anyone else's.</p>
-      </div>
-
-      <div class="wisdom-card card rotate-left-sm">
-        <div class="washi-tape washi-caput"></div>
-        <div class="push-pin pin-small pin-caput"></div>
-        <p class="wisdom-label">motto</p>
-        <p class="wisdom-quote">Productive women don't wait for change</p>
-        <p class="wisdom-sub">Staying proactive, not reactive — building the life I want instead of waiting for it.</p>
-      </div>
-
-      <div class="wisdom-card card rotate-right-sm">
-        <div class="washi-tape washi-slate"></div>
-        <div class="push-pin pin-small pin-slate"></div>
-        <p class="wisdom-label">concept</p>
-        <p class="wisdom-quote">Sound vs Signal</p>
-        <p class="wisdom-sub">Learning to tune out noise and act on what actually matters.</p>
-      </div>
-
-      <div class="wisdom-card card rotate-left">
-        <div class="washi-tape washi-tan"></div>
-        <div class="push-pin pin-small pin-caput"></div>
-        <p class="wisdom-label">habit</p>
-        <p class="wisdom-quote">Ted Talks</p>
-        <p class="wisdom-sub">Curating perspectives that expand how I see the world.</p>
-      </div>
-
-      <div class="wisdom-card card rotate-right">
-        <div class="washi-tape washi-coffee"></div>
-        <div class="push-pin pin-small pin-slate"></div>
-        <p class="wisdom-label">habit</p>
-        <p class="wisdom-quote">Journaling</p>
-        <p class="wisdom-sub">Processing thoughts, tracking growth, and staying intentional.</p>
-      </div>
-
+    </div>
     </div>
   </section>
 
   <!-- ======= FOOTER / CONTACT ======= -->
   <footer class="footer" id="contact">
+    <img src="images/redesign 1/footer background.png?v=2" class="footer-bg-img" alt="">
     <div class="footer-tape"></div>
     <div class="footer-inner">
       <p class="footer-name">Vivienne McGaha</p>
@@ -294,8 +287,7 @@
           <i class="fas fa-envelope"></i>
         </a>
       </div>
-      <p class="footer-copy">© 2025 Vivienne McGaha</p>
-      <p class="footer-updated">last updated Apr 2026</p>
+      <p class="footer-updated">last updated May 2026</p>
     </div>
   </footer>
 
@@ -353,5 +345,14 @@
   </script>
 
   <script src="scripts.js"></script>
+  <script>
+    document.querySelectorAll('.project-card[data-color]').forEach(card => {
+      const hex = card.dataset.color;
+      const r = parseInt(hex.slice(1,3),16);
+      const g = parseInt(hex.slice(3,5),16);
+      const b = parseInt(hex.slice(5,7),16);
+      card.style.setProperty('--tape-color', `rgb(${r},${g},${b})`);
+    });
+  </script>
 </body>
 </html>

@@ -6,16 +6,18 @@
   <title>About Me — Vivienne McGaha</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=Special+Elite&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
-<body>
+<body class="about-page">
+
+  <!-- Signature -->
+  <div class="page-sig"><img src="images/redesign 1/signature paper tare.png" alt="vqm"><img src="images/redesign 1/leaves.png" class="page-sig-leaves" alt=""></div>
 
   <!-- ======= NAVIGATION ======= -->
   <nav class="navbar">
-    <a href="index.html" class="nav-brand">Vivienne McGaha</a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -36,81 +38,57 @@
     <div class="section-header">
       <div class="section-tape"></div>
       <h2 class="section-title">About Me</h2>
-      <p class="section-sub">get to know the real me ✦</p>
+      <img src="images/redesign 1/bytes of wisdom/orange & blue sparkle.png" class="about-title-sparkle" alt="">
+      <img src="images/redesign 1/about me bio.png?v=3" class="about-bio-img" alt="get to know the real me">
     </div>
 
     <div class="about-page-layout">
 
-      <!-- LEFT COLUMN -->
-      <div class="about-page-left">
+      <!-- LEFT: Photo + cards below -->
+      <div class="about-page-image-col">
 
-        <!-- About Me card -->
-        <div class="about-card card" id="about-card">
-          <div class="washi-tape washi-navy"></div>
-          <h3 class="card-label">About Me</h3>
-          <p class="card-text">Hii! My name is Vivienne, and I am a first-year student at the University of Florida studying Finance with minors in Economics and Professional Sales! I am currently interested in pursuing management roles or attending graduate school after graduation, in hopes of becoming a professor. Being able to contribute back to society and feel that impact is super important to me. I am always happy to meet new people, so don't be afraid to reach out! #GoGators🐊♡</p>
+        <!-- Image + bio + cards side by side -->
+        <div class="about-image-top">
+          <img src="images/redesign 1/about me.png?v=3" class="about-me-photo" alt="Vivienne">
+          <div class="about-me-bio">
+            <p>hi! my name is vivienne and i am a second-year student at the university of florida studying finance, with potential minors in sociology and public relations. i'm drawn to the intersection of business, creativity, and technology - whether its designing something useful, bringing a new idea to life, or sharing my knowledge with others.</p>
+            <p>i am passionate about using my strengths, leadership, and creativity to make a meaningful contribution to the world around me, making an impact is super important to me!</p>
+            <p>i'm always looking for new experiences, new people, and new ways to grow. feel free to reach out if you want to connect :) #gogators &lt;3</p>
+          </div>
+          <div class="about-side-cards">
+            <div class="about-sticky-wrap">
+              <img src="images/redesign 1/about me sticky note.png" class="about-sticky-img" alt="About Me Sticky Note">
+              <span class="sticky-tape-label">fun facts</span>
+              <ul class="about-sticky-items">
+                <li>𖦹 loves watching ted talks</li>
+                <li>𖦹 ride or die notability user</li>
+                <li>𖦹 probably overthinking a canva design</li>
+                <li>𖦹 fruit tea girlie</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
-        <!-- Current Obsessions card -->
-        <div class="obsessions-card card dark-card" id="obsessions">
-          <div class="washi-tape washi-coffee"></div>
-          <div class="push-pin"></div>
-          <h3 class="card-label">Current<br>Obsessions</h3>
-          <ul class="obsessions-list">
-            <li><span class="obs-label">Listening:</span> The Romantic by Bruno Mars</li>
-            <li><span class="obs-label">Reading:</span> The Let Them Theory by Mel Robbins</li>
-            <li><span class="obs-label">Learning:</span> Power BI</li>
-          </ul>
-        </div>
-
-      </div>
-
-      <!-- RIGHT COLUMN -->
-      <div class="about-page-right">
-
-        <!-- Clifton Strengths card -->
-        <div class="strengths-card card caput-card">
-          <div class="washi-tape washi-slate"></div>
-          <div class="push-pin pin-small pin-caput"></div>
-          <h3 class="card-label">Clifton Strengths</h3>
-          <ol class="strengths-list">
-            <li>Significance</li>
-            <li>Competition</li>
-            <li>Achiever</li>
-            <li>Activator</li>
-            <li>Focus</li>
-          </ol>
-        </div>
-
-        <!-- Involvements card -->
-        <div class="events-card card slate-card">
-          <div class="washi-tape washi-caput"></div>
-          <div class="push-pin pin-small pin-slate"></div>
-          <h3 class="card-label">Involvements</h3>
-          <ul class="events-list">
-            <li>Incoming Program Manager, L3Harris – Summer 2026</li>
-            <li>Secretary, Tau Beta Sigma – Beta Xi</li>
-            <li>Florida Leadership Academy</li>
-          </ul>
-        </div>
-
-        <!-- Zodiac + MBTI tags -->
-        <div class="personal-tags">
-          <div class="tag-row"><span class="tag-symbol">☀️</span><span>Leo Sun</span></div>
-          <div class="tag-row"><span class="tag-symbol">🌙</span><span>Libra Moon</span></div>
-          <div class="tag-row"><span class="tag-symbol">⬆</span><span>Cancer Rising</span></div>
-          <div class="tag-divider"></div>
-          <div class="tag-row tag-mbti"><span class="tag-symbol">✦</span><span>ESTJ · The Executive</span></div>
+        <!-- Image cards below -->
+        <div class="about-page-cards-col">
+          <img src="images/redesign 1/future goals card.png" class="about-card-img future-goals-img" alt="Future Goals">
+          <img src="images/redesign 1/clifton strengths card.png" class="about-card-img" alt="Clifton Strengths">
+          <img src="images/redesign 1/big 3 + mbti card.png" class="about-card-img" alt="Big 3 + MBTI">
         </div>
 
       </div>
 
     </div>
+
+    <img src="images/redesign 1/about me flowers.png" class="about-flowers" alt="">
+    <img src="potential stickers/snoopy converse all star.png" class="about-sticker about-sticker-snoopy" alt="">
+    <img src="potential stickers/quirky star.png" class="about-sticker about-sticker-star" alt="">
 
   </main>
 
   <!-- ======= FOOTER ======= -->
   <footer class="footer" id="contact">
+    <img src="images/redesign 1/footer background.png?v=2" class="footer-bg-img" alt="">
     <div class="footer-tape"></div>
     <div class="footer-inner">
       <p class="footer-name">Vivienne McGaha</p>
@@ -128,7 +106,7 @@
           <i class="fas fa-envelope"></i>
         </a>
       </div>
-      <p class="footer-copy">© 2025 Vivienne McGaha</p>
+      <p class="footer-updated">last updated May 2026</p>
     </div>
   </footer>
 
